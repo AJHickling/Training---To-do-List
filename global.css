@@ -1,0 +1,58 @@
+* {
+    --base: rgb(150, 191, 184);
+    --surface: rgb(247, 248, 248);
+    --primary: rgb(43, 130, 148);
+    --border: rgb(207, 232, 228);
+
+    border-radius: 0.8rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 90vh;
+}
+
+.box {
+    height: 30rem;
+    width: 20rem;
+    background-color: var(--base);
+    border-bottom: 0.5rem solid var(--border);
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+form {
+    display: flex;
+    gap: 0.2rem;
+    padding: 0.2rem;
+    
+    border: 1px solid rgb(210, 216, 229);
+    background-color: var(--surface);
+}
+
+input {
+    border: none;
+}
+
+#todo-input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    background-color: var(--surface);
+}
+
+.button {
+    padding: 0 1rem;
+    background-color: var(--primary);
+    color: var(--surface);
+    font-weight: 600;
+}
+
+.display {
+    background-color: var(--surface);
+    flex-grow: 1;
+    overflow: scroll;
+}

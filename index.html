@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To-do List</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Import Stylesheet -->
+        <link rel="stylesheet" href="global.css" type="text/css">
+    </head>
+
+    <body>
+        <div class="box">
+            <form onsubmit="return false">
+                <input type="text" name="todo-input" id="todo-input">
+                <input class="button" type="submit" value="Submit" onclick="addItem()"/>
+            </form>
+            <div class="display">
+                <ul id="items">
+                    
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            let items = [];
+
+            function addItem() {
+                console.log('Ran');
+                
+                let newItem = document.getElementById('todo-input').value;
+                document.getElementById('todo-input').value = '';
+
+                document.getElementById('items').innerHTML += `<li>${newItem}</li>`;
+            };
+
+        </script>
+    </body>
+</html>
